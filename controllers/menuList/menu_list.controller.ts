@@ -30,7 +30,7 @@ export default class MenuListController {
       const menuListResp = await MenuListModel.findAllByOwnerId({ ownerId: userId });
       return res.status(200).json(menuListResp);
     } catch (err) {
-      return res.status(500).send(err.toString());
+      return res.status(500).send(err);
     }
   }
 
@@ -68,7 +68,7 @@ export default class MenuListController {
       }
       res.json(result);
     } catch (err) {
-      return res.status(500).send(err.toString());
+      return res.status(500).send(err);
     }
   }
 
@@ -100,7 +100,7 @@ export default class MenuListController {
       const result = await MenuListModel.add({ ...validateReq.data.body, ownerId: userId });
       return res.status(200).json(result);
     } catch (err) {
-      return res.status(500).send(err.toString());
+      return res.status(500).send(err);
     }
   }
 
@@ -136,7 +136,7 @@ export default class MenuListController {
       await MenuListModel.update({ ownerId: userId, id: validateReq.data.params.menuListId, title, desc, menu });
       return res.status(200).end();
     } catch (err) {
-      return res.status(500).send(err.toString());
+      return res.status(500).send(err);
     }
   }
 }

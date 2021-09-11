@@ -170,7 +170,7 @@ export default class EventController {
       });
       return res.json(result);
     } catch (err) {
-      return res.status(500).send(err.toString());
+      return res.status(500).send(err);
     }
   }
 
@@ -208,7 +208,7 @@ export default class EventController {
       });
       return res.end();
     } catch (err) {
-      return res.status(500).send(err.toString());
+      return res.status(500).send(err);
     }
   }
 
@@ -233,7 +233,7 @@ export default class EventController {
       });
       return res.json(result);
     } catch (err) {
-      return res.status(500).send(err.toString());
+      return res.status(500).send(err);
     }
   }
 }
