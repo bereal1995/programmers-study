@@ -109,7 +109,7 @@ const SearchBeverage: React.FC<Props> = ({ beverages, updateBeverages, selectedM
 
   const displaySearchResult = searchBeverages();
   const menus = selectedMenus.map((menu) => (
-    <li className="flex justify-center items-center p-2 border rounded-md" key={menu.id}>
+    <li className="flex justify-center items-center p-2 border rounded-md">
       <p className="flex-grow">
         <b>{menu.title}</b>
       </p>
